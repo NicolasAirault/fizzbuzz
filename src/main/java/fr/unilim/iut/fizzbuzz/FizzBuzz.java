@@ -2,30 +2,28 @@ package fr.unilim.iut.fizzbuzz;
 
 public class FizzBuzz {
 
+	private isSomething fizz;
+	private isSomething buzz;
+	private isSomething bang;
+
 	public String donnerLaReponsePour(Integer nombre) {
+		String mot = "";
 
-		if (isFizzBuzz(nombre))
-			return "fizzbuzz";
+		if (fizz.something(nombre)) {
+			mot += fizz.mot();
+			return mot;
+		}
 
-		if (isBuzz(nombre))
-			return "buzz";
+		if (buzz.something(nombre)) {
+			mot += buzz.mot();
+			return mot;
+		}
 
-		if (isFizz(nombre))
-			return "fizz";
+		if (bang.something(nombre)) {
+			mot += bang.mot();
+			return mot;
+		}
 
-		return String.valueOf(nombre);
+		return mot;
 	}
-
-	private boolean isFizzBuzz(Integer nombre) {
-		return 0 == nombre % (3 * 5);
-	}
-
-	private boolean isBuzz(Integer nombre) {
-		return 0 == nombre % 5;
-	}
-
-	private boolean isFizz(Integer nombre) {
-		return 0 == nombre % 3;
-	}
-
 }
