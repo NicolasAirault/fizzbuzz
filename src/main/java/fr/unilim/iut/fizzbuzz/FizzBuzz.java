@@ -8,20 +8,20 @@ public class FizzBuzz {
 
 	public String donnerLaReponsePour(Integer nombre) {
 		String mot = "";
+		fizz = new Fizz();
+		buzz = new Buzz();
+		bang = new Bang();
 
 		if (fizz.something(nombre)) {
-			mot += fizz.mot();
-			return mot;
+			mot = mot + fizz.mot();
 		}
 
 		if (buzz.something(nombre)) {
-			mot += buzz.mot();
-			return mot;
+			mot = mot + buzz.mot();
 		}
 
 		if (bang.something(nombre)) {
-			mot += bang.mot();
-			return mot;
+			mot = mot + bang.mot();
 		}
 
 		return mot;
